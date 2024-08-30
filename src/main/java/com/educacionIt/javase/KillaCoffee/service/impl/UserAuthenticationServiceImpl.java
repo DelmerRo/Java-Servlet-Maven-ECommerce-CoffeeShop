@@ -1,8 +1,9 @@
-package com.educacionIt.javase.KillaCoffee.service;
+package com.educacionIt.javase.KillaCoffee.service.impl;
 
 import com.educacionIt.javase.KillaCoffee.model.dao.UserDao;
 import com.educacionIt.javase.KillaCoffee.model.dao.impl.UserDaoImpl;
 import com.educacionIt.javase.KillaCoffee.model.entity.User;
+import com.educacionIt.javase.KillaCoffee.service.UserAuthenticationService;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 

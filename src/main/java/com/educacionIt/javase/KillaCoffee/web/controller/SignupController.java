@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.educacionIt.javase.KillaCoffee.service.UserAuthenticationService;
-import com.educacionIt.javase.KillaCoffee.service.UserAuthenticationServiceImpl;
+import com.educacionIt.javase.KillaCoffee.service.impl.UserAuthenticationServiceImpl;
 
 /**
  * Servlet implementation class SignupController

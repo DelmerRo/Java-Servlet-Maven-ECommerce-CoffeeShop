@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.educacionIt.javase.KillaCoffee.service.UserAuthenticationService;
 import com.educacionIt.javase.KillaCoffee.service.UserAuthenticationServiceImpl;
-import com.educacionIt.javase.KillaCoffee.web.dto.AuthUsers;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class SignupController
  */
-public class LoginController extends HttpServlet {
+public class SignupController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-private final UserAuthenticationService userAuthenticationService;
+	
+	private final UserAuthenticationService userAuthenticationService;
+
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public LoginController() {
-		super();
+	public SignupController() {
 	userAuthenticationService = new UserAuthenticationServiceImpl();
 	}
 
@@ -30,7 +30,7 @@ private final UserAuthenticationService userAuthenticationService;
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("login.jsp").forward(request, response);
+		request.getRequestDispatcher("/signup.jsp").forward(request, response);
 	}
 
 	/**
@@ -39,19 +39,11 @@ private final UserAuthenticationService userAuthenticationService;
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	String userName = request.getParameter("userName");
-	String password = request.getParameter("password");
-	
-	boolean isAuthenticated = userAuthenticationService.authenticateUser(userName, password);
-	
-	if(isAuthenticated) {
-		AuthUsers authUsers = new AuthUsers(userName);
-		request.getSession().setAttribute("auth-user", authUsers);
-		response.sendRedirect("home");
-	}else {
-		request.setAttribute("error", "nombre de usuario o contraseña incorrecto");
-		request.getRequestDispatcher("/login.jsp").forward(request, response);
-	}
+		String userName = request.getParameter("userName");
+		String password = request.getParameter("password");
+		
+		userAuthenticationService.signup(userName, password);
+		response.sendRedirect("login");
 	}
 
 }

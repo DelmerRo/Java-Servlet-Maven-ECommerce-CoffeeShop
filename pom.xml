@@ -21,6 +21,13 @@
     </properties>
 
     <dependencies>
+        
+         <dependency>
+    <groupId>org.mariadb.jdbc</groupId>
+    <artifactId>mariadb-java-client</artifactId>
+    <version>3.0.6</version> <!-- Asegúrate de usar la versión más reciente disponible -->
+</dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -41,7 +48,6 @@
             <artifactId>bcrypt</artifactId>
             <version>0.10.2</version>
         </dependency>
-
     </dependencies>
 
     <build>

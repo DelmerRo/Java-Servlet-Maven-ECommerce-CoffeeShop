@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>KillaCoffee - Login</title>
+<title>KillaCoffee - Registro</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
  <style>
         body {
@@ -51,10 +51,10 @@
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="mb-0">Bienvenido a KillaCoffee</h3>
+                        <h3 class="mb-0">Registrate a KillaCoffee</h3>
                     </div>
                     <div class="card-body p-4">
-                        <form action="login" method="post" class="p-4">
+                        <form action="signup" method="post" class="p-4">
                             <div class="mb-3">
                                 <label for="text" class="form-label">Usuario</label>
                                 <input type="text" class="form-control" id="userName" name="userName" placeholder="jindrg12" required>
@@ -73,11 +73,8 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center">
-                                <button type="submit" class="btn btn-login">Iniciar Sesión</button>
+                                <button type="submit" value="Registrarme" class="btn btn-login">Registrar</button>
                             </div>
-                        <div class="text-center mt-3">
-                        <a href="signup">Registrate Aquí</a>
-                        </div>
                         </form>
                     </div>
                 </div>

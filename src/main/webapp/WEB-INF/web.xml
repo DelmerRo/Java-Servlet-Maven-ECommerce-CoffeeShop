@@ -8,10 +8,20 @@
   	<servlet-name>LoginController</servlet-name>
   	<display-name>LoginController</display-name>
   	<description></description>
-  	<servlet-class>com.educacionIt.javase.KillaCoffee.web.controller.LoginContoller</servlet-class>
+  	<servlet-class>com.educacionIt.javase.KillaCoffee.web.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SignupController</servlet-name>
+  	<display-name>SignupController</display-name>
+  	<description></description>
+  	<servlet-class>com.educacionIt.javase.KillaCoffee.web.controller.SignupController</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>LoginController</servlet-name>
   	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SignupController</servlet-name>
+  	<url-pattern>/signup</url-pattern>
   </servlet-mapping>
 </web-app>

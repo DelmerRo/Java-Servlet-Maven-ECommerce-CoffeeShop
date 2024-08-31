@@ -45,7 +45,7 @@ public class ProductServiceImpl implements ProductService{
 			return new MessageResponse("Producto no encontrado", true);
 		}
 		boolean success = productDao.delete(id);
-		return null;
+		return new MessageResponse(success?"Producto Eliminado" : "Error al eliminar producto", !success);
 	}
 
 	@Override

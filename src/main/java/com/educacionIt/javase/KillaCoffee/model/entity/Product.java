@@ -1,5 +1,8 @@
 package com.educacionIt.javase.KillaCoffee.model.entity;
 
+import com.educacionIt.javase.KillaCoffee.web.dto.ProductDto;
+import com.educacionIt.javase.KillaCoffee.web.dto.ProductStockDto;
+
 public class Product {
 	private long id;
 	private String name;
@@ -13,8 +16,7 @@ public class Product {
 	
 	}
 
-	public Product(long id, String name, String description, Double price, Integer quantity, Integer minQuantity,
-			ProductStatus status) {
+	public Product(long id, String name, String description, Double price, Integer quantity, Integer minQuantity) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -22,7 +24,6 @@ public class Product {
 		this.price = price;
 		this.quantity = quantity;
 		this.minQuantity = minQuantity;
-		this.status = status;
 	}
 
 	public long getId() {
@@ -80,5 +81,12 @@ public class Product {
 	public void setStatus(ProductStatus status) {
 		this.status = status;
 	}
-
+	
+	public ProductDto toDto() {
+		return new ProductDto(id, name, description, price, quantity, minQuantity);
+	}
+	
+	public ProductStockDto toStockDto() {
+		return new ProductStockDto(id, name, quantity, minQuantity);
+	}
 }
